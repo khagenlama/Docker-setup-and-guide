@@ -17,3 +17,20 @@ Run image
 docker run -d -p 8080:80 my-php-app
 
 View your application at http://localhost:8080
+
+compose.yaml
+services:
+  web:
+    build: .
+    ports:
+      - "8080:80"
+    develop:
+      watch:
+        - action: sync
+          path: ./lp-fwwc
+          target: /var/www/html
+
+
+Run commands
+docker compose up --watch
+docker compose down
