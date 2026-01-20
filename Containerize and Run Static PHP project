@@ -1,0 +1,19 @@
+In Dockerfile
+
+# Use an official PHP image with Apache pre-installed
+FROM php:8.1-apache
+
+# Copy your project files into the container's web root
+COPY ./your-php-app /var/www/html/
+
+# Expose the port Apache is running on
+EXPOSE 80
+
+
+Build docker image
+docker build -t my-php-app .
+
+Run image
+docker run -d -p 8080:80 my-php-app
+
+View your application at http://localhost:8080
