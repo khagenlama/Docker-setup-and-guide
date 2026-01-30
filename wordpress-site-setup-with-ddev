@@ -1,0 +1,9 @@
+Run wordpress site following this guide
+https://docs.ddev.com/en/stable/users/quickstart/#wordpress-git-clone
+
+Import database
+https://docs.ddev.com/en/stable/users/usage/database-management/
+
+Import media manually if not included in git or in folder
+
+Then run ddev launch
